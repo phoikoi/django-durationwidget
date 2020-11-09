@@ -64,8 +64,8 @@ class TimeDurationWidget(MultiWidget):
 
     def get_context(self, name, value, attrs):
         context = super(TimeDurationWidget, self).get_context(name, value, attrs)
-        duration_readable = None
-        if not isinstance(value, list):
+        duration_readable = ""
+        if not isinstance(value, list) and value:
             duration_readable = get_human_readable_duration(value)
         context['duration_readable'] = duration_readable
         return context
