@@ -1,5 +1,8 @@
 #  Django Duration Widget
 
+This package provides a more natural way of defining duration fields in forms. It is derived from the
+work of Devang Padhiyar [here](https://github.com/devangpadhiyar/django-durationwidget) and provides a
+Python2 compatible implementation.
 
 ### When to use?
 
@@ -14,9 +17,9 @@ Django duration widget is used for simplfiend Django model's `Duration` field.
 
 ### Quick start
 
-1. Install `django-durationwidget` using `pip`
+1. Install `django-durationwidget2` using `pip`
 
-    `pip install django-durationwidget`
+    `pip install django-durationwidget2`
 
 2. Add `durationwidget` to your `INSTALLED_APPS` setting like this::
 

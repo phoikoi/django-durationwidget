@@ -4,19 +4,20 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="django-durationwidget",
-    version="1.0.4",
-    author="Devang Padhiyar",
-    author_email="devangpadhiyar700@gmail.com",
+    name="django-durationwidget2",
+    version="1.0.5",
+    author="Simone Pozzoli",
+    author_email="simonepozzoli1@gmail.com",
     description="Django Duration field widget to handle duration field in the form",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/devangpadhiyar/django-durationwidget",
+    url="https://github.com/pozzolana93/django-durationwidget",
     packages=setuptools.find_packages(),
     install_requires=[
         'Django>=1.11',
     ],
     classifiers=[
+        "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",

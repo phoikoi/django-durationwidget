@@ -81,7 +81,7 @@ class TimeDurationWidget(MultiWidget):
         _widgets.append(LabeledNumberInput(label="Hours", type="hours")) if show_hours else None,  # Hour
         _widgets.append(LabeledNumberInput(label="Minutes", type="minutes")) if show_minutes else None,  # Minute
         _widgets.append(LabeledNumberInput(label="Seconds", type="seconds")) if show_seconds else None,  # Seconds
-        super().__init__(_widgets, attrs)
+        super(TimeDurationWidget, self).__init__(_widgets, attrs)
 
     # ---------------------------------------------------------------------------------------------------------------------
     def decompress(self, value):
