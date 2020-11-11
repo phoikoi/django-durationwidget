@@ -96,6 +96,9 @@ class TimeDurationWidget(MultiWidget):
     def value_from_datadict(self, data, files, name):
         data_list = {widget.type: widget.value_from_datadict(data, files, name + '_{0}'.format(i)) for i, widget in
                      enumerate(self.widgets)}
+        if not any(data_list.values()):
+            # No data input
+            return ''
         for key, val in data_list.items():
             try:
                 data_list[key] = int(val)
