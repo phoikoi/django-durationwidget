@@ -8,11 +8,11 @@ Python2 compatible implementation.
 
 You can find duration field as below which is not far good for humans to use.
 
-![Duration](/docs/duration.png)
+![Duration](./docs/duration.png)
 
 
 
-Django duration widget is used for simplfiend Django model's `Duration` field.
+Django duration widget is used for simplifying Django model's `Duration` field.
 
 
 ### Quick start
@@ -68,7 +68,7 @@ Django duration widget is used for simplfiend Django model's `Duration` field.
 
 It will render Duration field as below
 
-![Duration field](/docs/duration_final.png)
+![Duration field](./docs/duration_final.png)
 
 
 ## TimeDurationWidget
