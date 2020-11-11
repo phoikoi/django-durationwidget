@@ -2,7 +2,7 @@ from datetime import timedelta
 from gettext import ngettext
 
 from django.forms import MultiWidget
-from django.forms.widgets import Input
+from django.forms.widgets import NumberInput
 from django.utils.dateparse import parse_duration
 
 
@@ -35,22 +35,17 @@ def get_human_readable_duration(value):
     return " ".join(format_list)
 
 
-class LabeledNumberInput(Input):
-    input_type = "number"
+class LabeledNumberInput(NumberInput):
     template_name = 'widgets/labeled_number_input.html'
 
     def __init__(self, label=None, attrs=None, type=None):
         self.widget_label = label
         self.type = type
-        if attrs is not None:
-            attrs = attrs.copy()
-            self.input_type = attrs.pop('type', self.input_type)
-        super(Input, self).__init__(attrs)
+        super(LabeledNumberInput, self).__init__(attrs)
 
     # ---------------------------------------------------------------------------------------------------------------------
     def get_context(self, name, value, attrs):
-        context = super(Input, self).get_context(name, value, attrs)
-        context['widget']['type'] = self.input_type
+        context = super(LabeledNumberInput, self).get_context(name, value, attrs)
         context['widget']['widget_label'] = self.widget_label
         return context
 
