@@ -30,7 +30,7 @@ def get_human_readable_duration(value):
         format_list.append("{0} {1}".format(hours, ngettext("Hour", "Hours", hours)))
     if minutes > 0:
         format_list.append("{0} {1}".format(minutes, ngettext("Minute", "Minutes", minutes)))
-    if seconds > 0:
+    if seconds > 0 or not format_list:
         format_list.append("{0} {1}".format(seconds, ngettext("Second", "Seconds", seconds)))
     return " ".join(format_list)
 
